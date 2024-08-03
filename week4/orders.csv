@@ -1,0 +1,5 @@
+customer_name,customer_address,customer_phone,courier,status,items
+ayesha,123,123,0,Out for delivery,1
+Aminah ,Ol9,01724356,0,Preparing,"0,3"
+ali,ol0,09876,0,Delivered,0
+ali,ol9,123,0,Preparing,0
