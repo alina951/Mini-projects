@@ -1,0 +1,6 @@
+JSON (JavaScript Object Notation) is a lightweight data interchange format that's easy for humans to read and write and easy for machines to parse and generate. It is commonly used for data exchange between a server and a web application. Here are some key reasons we use JSON:
+
+Human-readable: JSON format is straightforward and easy to understand.
+Language-independent: JSON can be used with many programming languages, including Python.
+Structured: JSON allows us to store complex data structures like lists and dictionaries in a standardized format.
+In this script, JSON is used to save and load the lists of products and couriers from text files, which makes it easy to persist data between runs of the program.
