@@ -1,0 +1,115 @@
+# def great ():# define a function/ name a functin/ use () to tell python its a function not a variable
+#     print("hello") #statements
+#     print("goodmorning")
+# great()# calling the function
+#EXERCISE Q1
+# def add (a,b):
+#     c = a+b
+#     return(c)
+# result = add(5,4) # calling the function
+# print(result) # funtions are two types either they print or return the value
+
+# def add_sub(a,b):
+#     c = a+b
+#     d = a-b
+#     return(c,d)
+# result1,result2 = add_sub(5,4)
+
+# print (result1,result2)
+
+
+# def person(name, **data):# keyword variable length aruguments
+#     print(name)
+#     print(data)
+
+#     person("alina", age=28, city="mirpur", mobile = 98765,)
+    # we can use also for loop to do the same question
+
+# def person (name, **kwargs): # **kwargs arguemts
+        
+#         print(name)
+
+#         for key,value in kwargs.items():
+#             print(key,value)
+
+# person("alina", age=28, city="mirpur", mobile = 98765,)
+
+#EXERCISE Q2
+# def add (*args):#tuple add(1,2,3,4,56,8)
+#     c=0
+#     for i in args:
+#         c=i+1
+#         print(f'sum is {c}')
+
+# add (1,2)
+# add(6,5,6)
+# add(1,2,3,4,56,8)
+
+# def add(*args):
+#     for i in args:
+#         c=i+1
+#     print(f'sum is{c}')
+# add(1,2)
+# add(3,4,5)
+# add(1,2,3,56,7,)
+#EXERCISE Q3
+# def create_dict (name, **kwargs): # **kwargs arguemts
+        
+#         print(name)
+
+#         for key,value in kwargs.items():
+#             print(key,value)
+
+# create_dict(name="alina", age=28, city="manchester", mobile = 98765,)
+
+#EXERCISE Q4
+
+print("1: ADD")
+print("2:subtract")
+print("3:MULTPLY")
+print("4: DIVIDE")
+print("5:SQUARE ROOT")
+print("6:raise to power")
+print("7: AREA OF CIRCLE")
+operation = int(input("choose an operation "))
+
+if operation == 1:
+# excute code for add
+    numb1 = int(input("enter first number: "))
+    numb2 = int(input("enter the second number"))
+    print(" the sum is "+str(int(numb1)+int(numb2)))
+elif operation== 2:
+        #excute code for multply
+        numb1 = input("enter first number: ")
+        numb2 = input("enter the second number")
+        print(" the sum is "+str(int(numb1)-(int(numb2))))
+            
+elif operation== 3:
+    #excute code for divide
+    numb1 = input("enter first number: ")
+    numb2 = input("enter the second number")
+    print(" the sum is "+str(int(numb1)*(int(numb2))))
+elif operation== 4:
+    numb1 = input("enter first number: ")
+    numb2 = input("enter the second number")
+    print(" the sum is "+str(int(numb1)/(int(numb2))))
+elif operation== 5:
+    import math
+    
+    numb = float(input("enter number: "))
+    print(" the square root  is %f" %(math.sqrt(numb)))
+
+elif operation== 6:
+    numb = int(input(" raise to power: "))
+    
+    print(" the result is %d" %(pow(numb, 2)))
+elif operation==7:
+    
+     import math
+     numb = float(input("enter the radius of the circle:"))
+     area_of_circle = math.pi* numb*numb
+     print = (f"Area of circle is :{area_of_circle}")
+else:
+
+    print("invalid Entry")
+    

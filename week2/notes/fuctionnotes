@@ -1,0 +1,27 @@
+# def add(a,b) a and b are formal arguments
+# c=a+b
+# print(c)
+
+# add(5,4) we have to pass numbers for arguments to work its called actualarugemts
+# these actual arguments have 4 types
+# 1: positional
+# 2: keywords
+# default
+# variable length
+
+
+#1 positional argument exmaple
+# def perosn (name, age):
+#     print(name)
+#     print(age)
+
+#     perosn( name= 'alina', age=38) # key worded arguments
+
+    #4 variable length arguments
+def sum(a, *b): # a will be asigned 1 value where as b is varable it will take 1+2, and 3and 4 
+    c = a
+    for i in b:
+         c= i+c
+    print(c)
+sum (1,2,3,4)
+        

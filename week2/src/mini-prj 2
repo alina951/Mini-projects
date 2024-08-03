@@ -1,0 +1,118 @@
+
+def main_menu():
+    print("Main Menu")
+    print("1. Orders Menu")
+    print("0. Exit")
+
+def orders_menu():
+    print("Orders Menu")
+    print("1. View Orders")
+    print("2. Add Order")
+    print("3. Update Order Status")
+    print("4. Update Order")
+    print("5. Delete Order")
+    print("0. Return to Main Menu")
+
+orders = []
+
+def view_orders():
+    if orders:
+        for idx, order in enumerate(orders):
+            print(f"{idx}: {order}")
+    else:
+        print("No orders available.")
+
+def add_order():
+    name = input("Enter customer name: ")
+    address = input("Enter customer address: ")
+    phone = input("Enter customer phone number: ")
+    order = {
+        "name": name,
+        "address": address,
+        "phone": phone,
+        "status": "PREPARING"
+    }
+    orders.append(order)
+    print("Order added successfully.")
+
+def update_order_status():
+    view_orders()
+    if not orders:
+        return
+    try:
+        index = int(input("Enter order index to update status: "))
+        if 0 <= index < len(orders):
+            print("Status options: 0: PREPARING, 1: READY, 2: DELIVERED")
+            status_options = ["PREPARING", "READY", "DELIVERED"]
+            status_index = int(input("Enter status index: "))
+            if 0 <= status_index < len(status_options):
+                orders[index]["status"] = status_options[status_index]
+                print("Order status updated successfully.")
+            else:
+                print("Invalid status index.")
+        else:
+            print("Invalid order index.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+def update_order():
+    view_orders()
+    if not orders:
+        return
+    try:
+        index = int(input("Enter order index to update: "))
+        if 0 <= index < len(orders):
+            order = orders[index]
+            for key in order.keys():
+                new_value = input(f"Enter new value for {key} (leave blank to keep current value): ")
+                if new_value:
+                    order[key] = new_value
+            print("Order updated successfully.")
+        else:
+            print("Invalid order index.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+def delete_order():
+    view_orders()
+    if not orders:
+        return
+    try:
+        index = int(input("Enter order index to delete: "))
+        if 0 <= index < len(orders):
+            orders.pop(index)
+            print("Order deleted successfully.")
+        else:
+            print("Invalid order index.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+def main():
+    while True:
+        main_menu()
+        user_input = input("Enter your choice: ")
+        if user_input == '0':
+            break
+        elif user_input == '1':
+            while True:
+                orders_menu()
+                orders_input = input("Enter your choice: ")
+                if orders_input == '0':
+                    break
+                elif orders_input == '1':
+                    view_orders()
+                elif orders_input == '2':
+                    add_order()
+                elif orders_input == '3':
+                    update_order_status()
+                elif orders_input == '4':
+                    update_order()
+                elif orders_input == '5':
+                    delete_order()
+                else:
+                    print("Invalid choice. Please try again.")
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
