@@ -1,0 +1,36 @@
+HOW and WHEN  to use while loop?
+whenever we have something to use multiple times/repetition we use while loop.
+HOW TO STRUCTURE IT?
+1: always start with varible i = 1 (its called initialization)
+2: write while i <= 5:   (have to give condition to make it works)
+3: i = i+1 (each time value will increase called increment or decrement according to your question)
+
+
+"FOR LOOP" It works for sequence such as list, tuple and sets.
+WHAT IS THE SYNTAX?
+x = ['ryan', 31, 1.8] (for loop will print everything one by one)
+for i in x: (dont forget to use indentation)
+print(i)
+
+" if , else example "  
+x = 5
+r = x % 2
+if (r==0):
+    print("even ")
+if (r==1):               here we had to use if twice we can improve it by using "else" 
+        print("odd")
+print ("bye")    
+
+
+or
+x = 7
+r = x % 2
+if (r==0):
+    print("even ")        here i used same example but with else.
+    if x>5:
+         print("ok")
+else:  
+      print("odd")
+print ("bye")      
+
+
